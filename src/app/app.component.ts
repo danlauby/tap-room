@@ -17,13 +17,8 @@ export class AppComponent {
   ];
 
 
-
-
-  //
-  // beerStrong(beer) {
-  //   if (beer.percent > 6) {
-  //     var  '';
-  //   }
-  // }
+addKeg(newKegFromChild: Beer) {
+  this.masterBeerList.push(newKegFromChild);
+}
 
 }

@@ -1,5 +1,5 @@
 <ul>
-  <li [class]="beerSpecial(beer)" *ngFor="let beer of childBeerList"><h3>{{beer.name}} <i class="fa fa-beer" aria-hidden="true"></i></h3>
+  <li  [class]="beerSpecial(beer)" *ngFor="let beer of childBeerList"><h3>{{beer.name}} <i class="fa fa-beer" aria-hidden="true"></i></h3>
     <ul>
       <li>Brand: {{beer.brand}}</li>
       <li>Price: ${{beer.price}}</li>

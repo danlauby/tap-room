@@ -9,14 +9,23 @@ import { Beer } from './../beer-list.model';
 
 export class BeerListComponent implements OnInit {
   @Input() childBeerList: Beer[];
-
   beerSpecial(beer) {
-    if (beer.price > 4) {
-      return "bg-info";
-    } else {
-      return "bg-success";
+    var color;
+    if (beer.percent > 7) {
+      color = "bg-warning";
+    } else if(beer.price <= 4){
+      color = "bg-success";
+    } else if(beer.price > 4){
+      color = "bg-info";
     }
+    return color;
   }
+  // var icon = false;
+  // showIcon(beer) {
+  //   if(beer.percent >= 7) {
+  //     icon = true;
+  //   }
+  // }
 
   constructor() { }
 

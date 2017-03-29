@@ -6,16 +6,16 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { BeerListComponent } from './beer-list/beer-list.component';
 import { QuantityComponent } from './quantity/quantity.component';
-import { ColorComponent } from './color/color.component';
 import { PercentComponent } from './percent/percent.component';
+import { NewKegComponent } from './new-keg/new-keg.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BeerListComponent,
     QuantityComponent,
-    ColorComponent,
-    PercentComponent
+    PercentComponent,
+    NewKegComponent,
   ],
   imports: [
     BrowserModule,

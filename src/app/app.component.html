@@ -4,5 +4,5 @@
     </h1>
     <h2>Beers:</h2>
     <app-beer-list [childBeerList]="masterBeerList">working?</app-beer-list>
-
+    <app-new-keg (newKegSender)="addKeg($event)"></app-new-keg>
 </div>
