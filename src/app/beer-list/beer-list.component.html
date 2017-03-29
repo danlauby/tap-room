@@ -1,0 +1,9 @@
+<ul>
+  <li [class]="beerSpecial(beer)" *ngFor="let beer of beers"><h3>{{beer.name}} <i class="fa fa-beer" aria-hidden="true"></i></h3>
+    <ul>
+      <li>Brand: {{beer.brand}}</li>
+      <li>Price: ${{beer.price}}</li>
+      <li>Percent: {{beer.percent}}%</li>
+    </ul>
+  </li>
+</ul>

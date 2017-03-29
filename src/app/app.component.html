@@ -3,13 +3,6 @@
       {{title}}
     </h1>
     <h2>Beers:</h2>
-    <ul>
-      <li [class]="beerSpecial(beer)" *ngFor="let beer of beers"><h3>{{beer.name}}</h3>
-        <ul>
-          <li>Brand: {{beer.brand}}</li>
-          <li>Price: ${{beer.price}}</li>
-          <li>Percent: {{beer.percent}}%</li>
-        </ul>
-      </li>
-    </ul>
+    <app-beer-list>working?</app-beer-list>
+
 </div>
