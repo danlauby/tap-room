@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Beer } from './../beer-list.model';
 
 @Component({
   selector: 'app-color',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./color.component.css']
 })
 export class ColorComponent implements OnInit {
+
+  
+
 
   constructor() { }
 
