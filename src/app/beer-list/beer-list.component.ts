@@ -33,6 +33,18 @@ export class BeerListComponent implements OnInit {
     return color;
   }
 
+  sellPint(beer) {
+    var newAmount = beer.amount -= 1;
+    beer.amount = newAmount;
+  }
+
+  stockWarning(beer) {
+    var color;
+    if (beer.amount <= 10) {
+      color = "bg-danger";
+    }
+    return color;
+  }
 
 
 

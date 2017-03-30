@@ -4,3 +4,13 @@ li {
   list-style-type: none;
   border-radius: 10px;
 }
+
+.buttonedit {
+  margin-bottom: 17px;
+}
+
+.filterbox {
+  margin-left: 40%;
+  margin-top: 20px;
+  color: green;
+}

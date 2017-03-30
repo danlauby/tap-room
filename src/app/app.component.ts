@@ -7,7 +7,7 @@ import { Beer } from './beer-list.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Get Sum!';
+  title = "Tipsy Server";
   selectedBeer = null;
 
   masterBeerList: Beer[] = [

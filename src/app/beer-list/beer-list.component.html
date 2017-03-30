@@ -1,16 +1,21 @@
-  <select (change)="onChange($event.target.value)">
-     <option value="allBeers">All Beers</option>
-     <option value="highContentBeers">High Content Beers</option>
-     <option value="lowContentBeers" selected="selected">Low Content Beers</option>
-   </select>
 <ul>
-
-<li [class]="beerSpecial(beer)" *ngFor="let beer of childBeerList | content:filterByContent"><h3>{{beer.name}}<i class="fa fa-beer" aria-hidden="true"></i></h3>
-    <ul>
-      <li>Brand: {{beer.brand}}</li>
-      <li>Price: ${{beer.price}}</li>
-      <li>Percent: {{beer.percent}}%</li>
-      <button (click)="editButtonHasBeenClicked(beer)" class="btn btn-warning btn-xs">Edit!</button>
-    </ul>
-  </li>
+  <div class="well">
+  <li [class]="beerSpecial(beer)" *ngFor="let beer of childBeerList | content:filterByContent"><h3 [class]="stockWarning(beer)"><i class="fa fa-beer" aria-hidden="true"></i> {{beer.name}}</h3>
+      <ul>
+        <li>Brand: {{beer.brand}}</li>
+        <li>Price: ${{beer.price}}</li>
+        <li>Percent: {{beer.percent}}%</li>
+        <li>Pints total: {{beer.amount}}</li>
+        <button (click)="editButtonHasBeenClicked(beer)" class="buttonedit btn btn-warning btn-xs">Edit!</button>
+        <button (click)="sellPint(beer)" class="buttonedit btn btn-info btn-xs">Sell Pint!</button>
+      </ul>
+    </li>
+    <div class="filterbox">
+      <select  (change)="onChange($event.target.value)">
+        <option value="allBeers" selected="selected">All Beers</option>
+        <option value="highContentBeers">High Content Beers</option>
+        <option value="lowContentBeers">Low Content Beers</option>
+      </select>
+    </div>
+  </div>
 </ul>
