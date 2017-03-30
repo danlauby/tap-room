@@ -9,6 +9,7 @@ import { QuantityComponent } from './quantity/quantity.component';
 import { PercentComponent } from './percent/percent.component';
 import { NewKegComponent } from './new-keg/new-keg.component';
 import { EditKegComponent } from './edit-keg/edit-keg.component';
+import { HighContentPipe } from './high-content.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { EditKegComponent } from './edit-keg/edit-keg.component';
     PercentComponent,
     NewKegComponent,
     EditKegComponent,
+    HighContentPipe
   ],
   imports: [
     BrowserModule,

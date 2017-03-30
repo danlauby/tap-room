@@ -11,6 +11,12 @@ export class BeerListComponent implements OnInit {
   @Input() childBeerList: Beer[];
   @Output() clickSender = new EventEmitter;
 
+  filterByContent: string = "lowContentBeers";
+
+  onChange(optionFromMenu) {
+  this.filterByContent = optionFromMenu;
+  }
+
   editButtonHasBeenClicked(kegToEdit: Beer) {
    this.clickSender.emit(kegToEdit);
   }

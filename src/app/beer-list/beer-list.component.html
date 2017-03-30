@@ -1,10 +1,16 @@
+  <select (change)="onChange($event.target.value)">
+     <option value="allBeers">All Beers</option>
+     <option value="highContentBeers">High Content Beers</option>
+     <option value="lowContentBeers" selected="selected">Low Content Beers</option>
+   </select>
 <ul>
-  <li [class]="beerSpecial(beer)" *ngFor="let beer of childBeerList"><h3>{{beer.name}} <i class="fa fa-beer" aria-hidden="true"></i></h3>
+
+<li [class]="beerSpecial(beer)" *ngFor="let beer of childBeerList | content:filterByContent"><h3>{{beer.name}}<i class="fa fa-beer" aria-hidden="true"></i></h3>
     <ul>
       <li>Brand: {{beer.brand}}</li>
       <li>Price: ${{beer.price}}</li>
       <li>Percent: {{beer.percent}}%</li>
-      <button (click)="editButtonHasBeenClicked(beer)">Edit!</button>
+      <button (click)="editButtonHasBeenClicked(beer)" class="btn btn-warning btn-xs">Edit!</button>
     </ul>
   </li>
 </ul>

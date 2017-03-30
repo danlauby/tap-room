@@ -1,3 +1,6 @@
-/*#iconMug {
-  display: none;
-}*/
+li {
+  margin: 10px;
+  padding: 5px;
+  list-style-type: none;
+  border-radius: 10px;
+}

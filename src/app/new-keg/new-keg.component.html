@@ -1,13 +1,16 @@
+<div class="well">
+  <h2>Add a new keg:</h2>
 <form>
   <label for="name">Name:</label>
-  <input #newName id="name" class="formcontrol" type="text" name="name">
+  <input #newName id="name" class="form-control" type="text" name="name"><br>
   <label for="brand">Brand:</label>
-  <input #newBrand id="brand" class="formcontrol" type="text" name="brand">
+  <input #newBrand id="brand" class="form-control" type="text" name="brand"><br>
   <label for="price">Price:</label>
-  <input #newPrice id="price" class="formcontrol" type="text" name="price">
+  <input #newPrice id="price" class="form-control" type="text" name="price"><br>
   <label for="percent">Percent:</label>
-  <input #newPercent id="percent" class="formcontrol" type="text" name="percent">
+  <input #newPercent id="percent" class="form-control" type="text" name="percent"><br>
   <label for="amount">Amount:</label>
   <input #newAmount id="amount" class="formcontrol" type="text" name="amount">
   <button (click)="submitForm(newName.value, newBrand.value, newPrice.value, newPercent.value, newAmount.value); newName.value=''; newBrand.value=''; newPrice.value=''; newPercent.value=''; newAmount.value='';" class="btn btn-success btn-sm">New Keg</button>
 </form>
+</div>
