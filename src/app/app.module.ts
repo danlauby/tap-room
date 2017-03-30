@@ -8,6 +8,7 @@ import { BeerListComponent } from './beer-list/beer-list.component';
 import { QuantityComponent } from './quantity/quantity.component';
 import { PercentComponent } from './percent/percent.component';
 import { NewKegComponent } from './new-keg/new-keg.component';
+import { EditKegComponent } from './edit-keg/edit-keg.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { NewKegComponent } from './new-keg/new-keg.component';
     QuantityComponent,
     PercentComponent,
     NewKegComponent,
+    EditKegComponent,
   ],
   imports: [
     BrowserModule,

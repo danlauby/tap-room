@@ -3,6 +3,8 @@
       {{title}}
     </h1>
     <h2>Beers:</h2>
-    <app-beer-list [childBeerList]="masterBeerList">working?</app-beer-list>
+    <app-beer-list [childBeerList]="masterBeerList" (clickSender)="editBeer($event)"></app-beer-list>
+    <app-edit-keg [childSelectedBeer]="selectedBeer" (doneButtonClickedSender)="finishedEditing()"></app-edit-keg>
     <app-new-keg (newKegSender)="addKeg($event)"></app-new-keg>
+
 </div>

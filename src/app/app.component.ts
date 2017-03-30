@@ -8,6 +8,8 @@ import { Beer } from './beer-list.model';
 })
 export class AppComponent {
   title = 'Get Sum!';
+  selectedBeer = null;
+
   masterBeerList: Beer[] = [
     new Beer('Lonely', 'St. Pauli Girl', 10, 4.9, 124),
     new Beer('Grumpy', 'Corona', 4, 7.2, 110),
@@ -17,8 +19,17 @@ export class AppComponent {
   ];
 
 
-addKeg(newKegFromChild: Beer) {
-  this.masterBeerList.push(newKegFromChild);
-}
+  editBeer(clickedBeer) {
+    this.selectedBeer = clickedBeer;
+  }
+  finishedEditing() {
+   this.selectedBeer = null;
+  }
+
+
+
+  addKeg(newKegFromChild: Beer) {
+    this.masterBeerList.push(newKegFromChild);
+  }
 
 }
